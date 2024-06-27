@@ -186,7 +186,7 @@ export default {
                         const newPwd = await request.text();
                         const oldPwd = await env.bpb.get('pwd');
                         if (newPwd === oldPwd) return new Response('Please enter a new Password!', { status: 400 });
-                        await env.bpb.put('pwd', william$nili);
+                        await env.bpb.put('pwd', newPwd);
 
                         return new Response('Success', {
                             status: 200,
